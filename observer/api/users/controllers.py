@@ -4,6 +4,7 @@ from flask import request
 
 @app.route('/api/v1/users/login', methods=['POST'])
 def login():
+    
     return responseUtil.ok({'accessToken': 'admin-token'})
 
 userList = [{
