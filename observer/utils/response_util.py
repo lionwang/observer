@@ -6,3 +6,6 @@ def ok(data = None, code = 20000):
     else:
         ret_data = {'code': code, 'data': data}
     return jsonify(ret_data)
+
+def error(code, msg=''):
+    return jsonify({'code': code, 'message': msg})

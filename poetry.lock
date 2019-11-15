@@ -47,6 +47,17 @@ itsdangerous = ">=0.24"
 
 [[package]]
 category = "main"
+description = "Basic and Digest HTTP authentication for Flask routes"
+name = "flask-httpauth"
+optional = false
+python-versions = "*"
+version = "3.3.0"
+
+[package.dependencies]
+Flask = "*"
+
+[[package]]
+category = "main"
 description = "Adds SQLAlchemy support to your Flask application."
 name = "flask-sqlalchemy"
 optional = false
@@ -180,7 +191,7 @@ version = "0.6.0"
 more-itertools = "*"
 
 [metadata]
-content-hash = "20a4092b5054ba3f7f33066aed6a895047cef1a560f5a633c89bf848b0afe6b3"
+content-hash = "65b007b0aeedd3675c19890d189190a632737534595b8a7a52cd9eaa4b490de9"
 python-versions = "^3.6"
 
 [metadata.hashes]
@@ -189,6 +200,7 @@ attrs = ["08a96c641c3a74e44eb59afb61a24f2cb9f4d7188748e76ba4bb5edfa3cb7d1c", "f7
 click = ["2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13", "5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"]
 colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
 flask = ["13f9f196f330c7c2c5d7a5cf91af894110ca0215ac051b5844701f2bfd934d52", "45eb5a6fd193d6cf7e0cf5d8a5b31f83d5faae0293695626f539a823e93b13f6"]
+flask-httpauth = ["0149953720489407e51ec24bc2f86273597b7973d71cd51f9443bd0e2a89bd72", "6ef8b761332e780f9ff74d5f9056c2616f52babc1998b01d9f361a1e439e61b9"]
 flask-sqlalchemy = ["0078d8663330dc05a74bc72b3b6ddc441b9a744e2f56fe60af1a5bfc81334327", "6974785d913666587949f7c2946f7001e4fa2cb2d19f4e69ead02e4b8f50b33d"]
 importlib-metadata = ["aa18d7378b00b40847790e7c27e11673d7fed219354109d0e7b9e5b25dc3ad26", "d5f18a79777f3aa179c145737780282e27b508fc8fd688cb17c7a813e8bd39af"]
 itsdangerous = ["321b033d07f2a4136d3ec762eac9f16a10ccd60f53c0c91af90217ace7ba1f19", "b12271b2047cb23eeb98c8b5622e2e5c5e9abd9784a153e9d8ef9cb4dd09d749"]

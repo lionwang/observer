@@ -8,6 +8,8 @@ authors = ["wlion <1923312209@qq.com>"]
 python = "^3.6"
 flask = "^1.1.1"
 Flask-SQLAlchemy = "^2.4"
+flask_httpauth = "^3.3"
+itsdangerous = "^1.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
