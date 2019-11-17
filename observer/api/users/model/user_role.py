@@ -1,6 +1,3 @@
-'''
-角色model
-'''
 from observer import db
 
 user_role = db.Table('user_role',

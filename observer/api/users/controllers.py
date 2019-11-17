@@ -6,7 +6,7 @@ from observer.utils import auth_util as authUtil
 from observer.utils import encrypt_util as encryptUtil
 from observer.api.users.model.user import User
 
-@app.route('/api/v1/users/login', methods=['POST'])
+@app.route('/api/v1/user/login', methods=['POST'])
 def login():
     json_data = request.json
     username = json_data.get('username')
@@ -19,9 +19,9 @@ def login():
     md5_password = encryptUtil.md5_encrypt(password, user.salt)
     if user.password != md5_password:
         return responseUtil.error(50003, '密码错误')
-    return responseUtil.ok({'accessToken': str(user.generate_auth_token(), encoding = "utf-8")})
+    return responseUtil.ok({'token': str(user.generate_auth_token(), encoding = "utf-8")})
 
-@app.route('/api/v1/users/info', methods=['POST', 'GET'])
+@app.route('/api/v1/user/info', methods=['POST', 'GET'])
 @auth.login_required
 def user_info():
     if None != g.user_id:
@@ -29,13 +29,13 @@ def user_info():
         return responseUtil.ok({'user': user.serialize()})
     return responseUtil.error(50004, '未知错误')
 
-@app.route('/api/v1/users/info/<int:user_id>', methods=['POST', 'GET'])
+@app.route('/api/v1/user/info/<int:user_id>', methods=['POST', 'GET'])
 @auth.login_required
 def info(user_id):
     user = db.session.query(User).get(user_id)
     return responseUtil.ok({'user': user.serialize()})
 
-@app.route('/api/v1/users/logout', methods=['POST', 'GET'])
+@app.route('/api/v1/user/logout', methods=['POST', 'GET'])
 @auth.login_required
 def logout():
     return responseUtil.ok()
